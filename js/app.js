@@ -69,20 +69,22 @@ sectionMiddleEarth.setAttribute("id", "middle-earth")
 
 function makeHobbits() {
   console.log("2: makeHobbits");
-  const hobbitsContainer = document.createElement("ul");
+
   // display an `unordered list` of hobbits in the shire
+  const hobbitsContainer = document.createElement('ul')
+  
   for (let hobbit of hobbits) {
-    const hobbitLI = document.createElement("li");
-  // give each hobbit a class of `hobbit`
-  hobbitLI.classList.add("hobbit");
-  hobbitLI.innerText = hobbit;
-  hobbitsContainer.appendChild(hobbitLI);
-}
+    const hobbitLI = document.createElement('li')
+    // give each hobbit a class of `hobbit`
+    hobbitLI.classList.add('hobbit')
+    hobbitLI.textContent = hobbit
+    hobbitsContainer.appendChild(hobbitLI)
+  }
 
   // hint: create a 'ul' outside the loop into which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
-  document.querySelector("#the-shire").appendChild(hobbitsContainer);
+  document.getElementById('the-shire').appendChild(hobbitsContainer)
 }
 
 
@@ -98,11 +100,12 @@ function keepItSecretKeepItSafe() {
   console.log("3: keepItSecretKeepItSafe");
 
   // create a div with an id of `'the-ring'`
-
+  const theRing = document.createElement("div"); 
+  theRing.setAttribute("id", "the-ring");
   // give the div a class of `'magic-imbued-jewelry'`
-
+theRing.classList.add("magic-imbued-jewelry");
   // add the ring as a child of `Frodo`
-
+document.querySelectorAll(".hobbit")[0].appendChild(theRing);
 }
 
 // COMMIT YOUR WORK
